@@ -2,6 +2,7 @@
 
 ## Update:
 
+- 2018.01.15: Bổ sung mục *Những điều học được sau dự án*
 - 2018.01.10: Thêm thành viên dự án. Quyết định cấu trúc dự án (Back-end và Front-end)
 - 2018.01.03: Tạo dự án 
 
@@ -60,6 +61,7 @@
 - Nguyễn Trung Tuyến
 - Nguyễn Thế Tùng
 - Lương Ngọc Phúc
+
 1. Requirements
 - Backend: api documents
 - Database: database schema
@@ -76,4 +78,57 @@ Nhóm sẽ làm theo các hướng dẫn sau:
 - [Creating a Blogging App Using React, Part 5: Profile Page](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-part-5-profile-page--cms-29131)
 - [Creating a Blogging App Using React, Part 6: Tags](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-part-6-tags--cms-29228)
 
+## Những điều học được qua dự án này
 
+- [ ] Cách đóng góp vào dự án mã nguồn mở trên Github
+    - [ ] Hiểu về Git cơ bản: `clone`, `add`, `commit`, `push`
+    - [ ] Hiểu về remote và local repositories 
+    - [ ] Biết tạo nhánh (branch) và hiểu về mục đích của việc tạo nhánh
+    - [ ] Biết cách `fork`, và `pull` để cập nhật từ repo gốc
+    - [ ] Biết cách `commit` và `push` lên remote repo của bản thân
+    - [ ] Biết cách tạo `pull request` để merge từ remote repo của bản thân vào repo gốc
+    - [ ] Biết cách cập nhật pull request khi muốn thay đổi hoặc sửa lỗi trước khi merge
+
+- [ ] Làm việc nhóm qua mạng
+    - [ ] Chọn chủ đề
+    - [ ] Thống nhất về workflow
+    - [ ] Ưu nhược điểm của làm việc nhóm
+    - [ ] Giao tiếp online: ưu nhược điểm. 
+    - [ ] Các công cụ để giao tiếp online
+    - [ ] Giao tiếp offline: ưu nhược điểm. Cách thức.
+    - [ ] Cách giải quyết khi có mâu thuẫn
+    - [ ] Công cụ để quản lý dự án theo nhóm
+    - [ ] Cách phân chia công việc:
+        - [ ] Cấu trúc của dự án
+        - [ ] Nhiệm vụ chi tiết  
+
+- [ ] Hiểu và thực hành các công nghệ front-end:
+    - [ ] Quy trình design:
+        - [ ] Viết requirement và user stories
+        - [ ] Sử dụng *Gravit Designer* để vẽ 
+    - [ ] Bootstrap
+    - [ ] React
+    - [ ] React-Router
+
+- [ ] Hiểu và thực hành các công nghệ back-end:
+    - [ ] Database:
+        - [ ] MongoDB
+        - [ ] Mongoose
+    - [ ] Rest API
+    - [ ] HTTP (hoặc HTTPs)
+    - [ ] User Authentication
+    - [ ] User Authorization
+
+- [ ] Hiểu và thực thành Node.js:
+    - [ ] Node.js
+    - [ ] Express.js
+
+- [ ] Hiểu và thực hành *unit test* cũng như *automation test*:
+    - [ ] Unit test sử dụng Karma, Mocha, Chai và Sinon
+    - [ ] Automation test sử dụng Selenium
+
+- [ ] Biết, thống nhất, và cấu hình cho linting tool
+    - [ ] Code format khi chạy trên local
+    - [ ] Code format khi commit lên remote
+
+- [ ] Biết cách cấu hình cho Webpack
