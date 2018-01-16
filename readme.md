@@ -85,15 +85,16 @@ Nhóm sẽ làm theo các hướng dẫn sau:
     - [ ] Hiểu về remote và local repositories 
     - [ ] Biết tạo nhánh (branch) và hiểu về mục đích của việc tạo nhánh
     - [ ] Biết cách `fork`, và `pull` để cập nhật từ repo gốc
-    - [ ] Biết cách `commit` và `push` lên remote repo của bản thna
+    - [ ] Biết cách `commit` và `push` lên remote repo của bản thân
     - [ ] Biết cách tạo `pull request` để merge từ remote repo của bản thân vào repo gốc
+    - [ ] Biết cách cập nhật pull request khi muốn thay đổi hoặc sửa lỗi trước khi merge
 
 - [ ] Làm việc nhóm qua mạng
     - [ ] Chọn chủ đề
     - [ ] Thống nhất về workflow
     - [ ] Ưu nhược điểm của làm việc nhóm
     - [ ] Giao tiếp online: ưu nhược điểm. 
-    - [ ] Các công cụ để giao tiếp onlie
+    - [ ] Các công cụ để giao tiếp online
     - [ ] Giao tiếp offline: ưu nhược điểm. Cách thức.
     - [ ] Cách giải quyết khi có mâu thuẫn
     - [ ] Công cụ để quản lý dự án theo nhóm
@@ -107,6 +108,7 @@ Nhóm sẽ làm theo các hướng dẫn sau:
         - [ ] Sử dụng *Gravit Designer* để vẽ 
     - [ ] Bootstrap
     - [ ] React
+    - [ ] React-Router
 
 - [ ] Hiểu và thực hành các công nghệ back-end:
     - [ ] Database:
@@ -117,7 +119,7 @@ Nhóm sẽ làm theo các hướng dẫn sau:
     - [ ] User Authentication
     - [ ] User Authorization
 
-- [ ] Hiểu và thực thành Node.jsL
+- [ ] Hiểu và thực thành Node.js:
     - [ ] Node.js
     - [ ] Express.js
 
