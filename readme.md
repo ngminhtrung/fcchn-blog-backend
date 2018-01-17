@@ -1,16 +1,36 @@
-# Free Code Camp Hanoi Blog Project
+# Free Code Camp Hanoi Blog Project (Back-end)
 
-## Update:
+## Giới thiệu chung
+---
+
+- **fcchn-blog** là dự án làm 1 platform giúp mọi người chia sẻ bài viết, với mục đích để học *front-end* (React) và *back-end* (Nodejs, Express và MongoDB) của 1 nhóm các thành viên Facebook group [freeCodeCamp Hà Nội](https://www.facebook.com/groups/free.code.camp.hanoi/).
+    - Phần front-end được lưu tại [đây](https://github.com/tamtm/fcchn-blog).
+    - Phần back-end được lưu tại [đây](https://github.com/ngminhtrung/fcchn-blog-backend)
+
+- Những thành viên đăng ký học, code, và đóng góp cho dự án này bao gồm:
+    - Front-end
+        - Nguyễn Quốc Đại
+        - Nguyễn Trung Tuyến
+        - Trịnh Minh Tâm
+        - Lê Đức Thắng
+    - Back-end: 
+        - Nguyễn Minh Trung
+        - Nguyễn Thế Phụng Long
+        - Nguyễn Thế Tùng
+        - Lương Ngọc Phúc
+
+#### Cập nhật:
 
 - 2018.01.15: Bổ sung mục *Những điều học được sau dự án*
 - 2018.01.10: Thêm thành viên dự án. Quyết định cấu trúc dự án (Back-end và Front-end)
 - 2018.01.03: Tạo dự án 
 
-## Giới thiệu
+## Tính năng và công nghệ
+---
 
-- Đây là dự án học React, sản phẩm là 1 blog để nhiều người cùng kết nối và chia sẻ kiến thức.  
+Là một platform để viết blog, nơi các thành viên có thể viết blog, đăng bài, xem bài của mình cũng như của người khác, bình luận vào bài của người khác. Sản phẩm này sẽ học theo các platform viết blog khác như Medium nhưng chỉ dừng ở mức cơ bản. Mục đích cuối cùng vẫn là nắm bắt được những công nghệ cần dùng cho 1 sản phẩm hoàn thiện (xem thêm mục "*Những điều học được qua dự án này*" ở bên dưới)
 
-## Tính năng
+### Tính năng chi tiết
 
 1. Đăng ký
 2. Đăng nhập
@@ -25,7 +45,7 @@
 11. Like
 12. Share Facebook
 
-## Công nghệ
+### Công nghệ sử dụng
 
 - Front-end: 
     - React
@@ -37,48 +57,25 @@
 - Testing:
     - Unit test: Karma, Mochai, Chai, Sinon
     - Automation test: Selenium
+- Bảo mật
 
-## Công cụ
+### Công cụ sử dụng
 
 1. Visual Design: Gravit Designer
+2. Visual Studio Code
 
-## Cấu trúc
+### Cấu trúc
 
 - client
 - server
 - test
 - configuration
 
-
-## Nhóm
-
-- Nguyễn Quốc Đại
-- Bui Duy Khánh
-- Nguyễn Thế Phụng Long
-- Trịnh Minh Tâm
-- Lê Đức Thắng
-- Nguyễn Minh Trung
-- Nguyễn Trung Tuyến
-- Nguyễn Thế Tùng
-- Lương Ngọc Phúc
-
-1. Requirements
-- Backend: api documents
-- Database: database schema
-- Frontend: visual design
-
 ## Tài liệu tham khảo:
-
-Nhóm sẽ làm theo các hướng dẫn sau:
-
-- [Creating a Blogging App Using React, Part 1: User Sign-In](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-user-sign-in--cms-28568)
-- [Creating a Blogging App Using React, Part 2: User Sign-Up](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-reactjs-add-post--cms-28579)
-- [Creating a Blogging App Using React, Part 3: Add & Display Post](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-part-3-add-display-post--cms-28685)
-- [Creating a Blogging App Using React, Part 4: Update & Delete Posts](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-part-4-update-delete-post--cms-28855)
-- [Creating a Blogging App Using React, Part 5: Profile Page](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-part-5-profile-page--cms-29131)
-- [Creating a Blogging App Using React, Part 6: Tags](https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-part-6-tags--cms-29228)
+---
 
 ## Những điều học được qua dự án này
+---
 
 - [ ] Cách đóng góp vào dự án mã nguồn mở trên Github
     - [ ] Hiểu về Git cơ bản: `clone`, `add`, `commit`, `push`
@@ -131,4 +128,10 @@ Nhóm sẽ làm theo các hướng dẫn sau:
     - [ ] Code format khi chạy trên local
     - [ ] Code format khi commit lên remote
 
+- [ ] Hiểu cơ bản về bảo mật cho website
+    - [ ] 
+    - [ ] 
+
 - [ ] Biết cách cấu hình cho Webpack
+
+- [ ] Triển khai sản phẩm: quản lý asset và Heroku
