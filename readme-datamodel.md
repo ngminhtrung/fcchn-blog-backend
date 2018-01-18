@@ -114,5 +114,7 @@ Lưu ý: Xem xét thay HTTP bằng HTTP**s** để đảm bảo bảo mật thô
 
 - Xem xét sử dụng Passport hoặc Stormpath
 
+### Bài tham khảo:
 
-
+- [RESTful API Cho Người Bắt Đầu](https://www.codehub.vn/RESTful-API-Cho-Nguoi-Bat-Dau)
+- [RESTful API Designing guidelines — The best practices](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
