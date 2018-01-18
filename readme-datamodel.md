@@ -1,7 +1,7 @@
 ## Yêu cầu cho data model
 
 ## Tính năng cho người dùng:
-
+---
 - Tài khoản:
     - Tạo tài khoản
     - Xóa tài khoản
@@ -20,8 +20,8 @@
     - Nhấn like comment
 
 ## Mô hình của database
-
-Để giải quyết bài toán trên, database của app sẽ cần 02 *collections*:
+---
+Để giải quyết bài toán trên, database của app sẽ cần 04 *collections*:
 
 ### Collection "User"
 
@@ -33,7 +33,8 @@ Ví dụ:
     "userName": "nguyenvana",
     "passworld": "123456789", // cần phải encrypt password
     "email": "nguyenvana@gmail.com",
-    "fullName": "Nguyen Van A",
+    "firstName": "A",
+    "lastName": "Nguyễn Văn"
     "avatar": "http://www.photos.com/nguyenvana.jog",
     "description": "Sinh vien FUNIX",
     "facebookAcc": "nguyenvana"
@@ -46,9 +47,15 @@ Ví dụ:
 {
     "_id": ObjectId("634b1153a2aa6a3233a914g9"),
     "title": "Kinh nghiệm sử dụng GIT",
-    "like": true, // true/ false
-    "userID": ObjectId("523b1153a2aa6a3233a913f8"),
-    "comments": {
+    "like": 6969 // Mỗi user có quyền like mỗi bài viết tối đa 50 lần
+    "userID": ObjectId("523b1153a2aa6a3233a913f8")
+}
+```
+
+### Collection "Comments"
+
+```js
+{
         [{
             "content": "Bài này viết tốt quá",
             "author": "Nguyễn Thị C",
@@ -61,48 +68,45 @@ Ví dụ:
             "authorID": ObjectId("412b1153a2aa6a3233a9132e7"),
             "like": false, // true or false
         }]
-    },
+},
+```
+
+### Collection "Likes"
+
+```js
+{
+    "author": "Nguyễn Thị C",
+    "authorID": ObjectId("745b1153a2aa6a3233a915h0"),
+    "type": "post" // "post" hoặc "comment"
+    "count": // "post": [0,50], "comment": [0,1]
 }
 ```
 
-### Yêu cầu chức năng cho REST API
+## Bảng liệt kê HTTP routes và verbs:
+---
 
-Như đã đề cập ở trên, mỗi user cần có khả năng làm những việc sau:
-- Tài khoản:
-    - Tạo tài khoản
-    - Xóa tài khoản
-    - Chỉnh sửa thông tin tài khoản
-    - Reset mật khẩu
-- Bài viết của bản thân:
-    - Tạo bài viết mới
-    - Edit bài viết cũ
-    - Xóa bài viết cũ
-    - Xem bài viết
-    - Share bài viết lên Facebook
-- Bài viết của người khác:
-    - View bài
-    - Nhấn like
-    - Comment 
-    - Nhấn like comment
+| Resources/Session    | Actions     | Routes     | Methods | Description | Parameters |
+|---        |---        |---        |---        |---        |---                |
+|Users  | index |/users |GET    | hiện toàn bộ users |      |
+|       | show  |/users/:id |GET    |hiện profile của user |    |
+|       | create|/users | POST      |                       |   |
+|       |update |/users/:id | PUT    |                       |   |
+|Posts  |index  |/posts    | GET    |hiện toàn bộ các posts |   |
+|       |show   |/posts/:id | GET   |hiện một post          |   |
+|       |update |/posts/:id |PUT    |thay đổi một post      |   |
+|       |delete |/posts/:id |DELTE  |xóa một post           |   |
+|Comments|index|/comments   |GET    | hiện toàn bộ comments của post |      |
+|       |create|/comments   |POST   |tạo comment            |   |
+|       |update|/comments/:id|PUT   |thay đổi một comment   |   |
+|       |delete|/comments/:id|DELELTE |xóa một comment      |   |
+|Likes  |index |/likes      |GET    |hiện toàn bộ các comments |    |
+|       |create|/likes      |POST   |tạo like               |   |
+|       |update|/likes/:id  |PUT    |cập nhật like          |   |
+|       |      |            |       |                       |   |
+|login  |login  |/login     |POST   |                       |   |
+|logout |logout |/logout    |DELTE  |                       |   |
+|forgot password |reset password |/forgot-password|PUT      |   |
 
-Bảng liệt kê HTTP routes và verbs:
-
-| Routes    | Verbs     | Mô tả     | Variables |
-|---        |---        |---        |---        |
-|/user/enroll   |POST   |Đăng ký user mới| username, password, fullName, email, avatar, description, facebookAcc |
-|/user/resetPassword   |PUT | Reset mật khẩu | password, email |
-|/user/deleteAcc       |PUT | Xóa tài khoản |   *Chưa rõ* |
-|/user/editAcc         |PUT | Chỉnh sửa tài khoản | password, fullName, email, avatar, description, facebookAcc |
-|/user/newPost| POST | Viết bài mới | *Chưa rõ*|
-|/user/editPost | PUT | Chỉnh sửa bài cũ | *Chưa rõ*|
-|/user/deletePost | PUT | Xóa bài cũ | *Chưa rõ* |
-|/user/sharePost | *Chưa rõ* | Share bài lên Facebook | *Chưa rõ* |
-|/user/viewPost | *Chưa rõ* | Xem bài viết bản thân | *Chưa rõ* |
-|/viewPosts |  | Xem toàn bộ danh sách bài viết | *Chưa rõ*|
-|/viewPost|  | Xem 1 bài viết |  |
-|/viewPost/like|   | Like bài viết đang xem |   |
-|/viewPost/comment|     | Comment bài viết đang xem | |
-|/viewPost/comment/like/ |   | Like một comment|   |
 
 Lưu ý: Xem xét thay HTTP bằng HTTP**s** để đảm bảo bảo mật thông tin
 

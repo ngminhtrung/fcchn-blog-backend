@@ -19,6 +19,11 @@
         - Nguyễn Thế Tùng
         - Lương Ngọc Phúc
 
+- Tài liệu quan trọng khác trong dự án:
+    - [Mô tả về data model](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-datamodel.md)
+    
+
+
 #### Cập nhật:
 
 - 2018.01.15: Bổ sung mục *Những điều học được sau dự án*
