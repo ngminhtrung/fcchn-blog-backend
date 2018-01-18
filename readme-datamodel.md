@@ -1,7 +1,7 @@
 ## Yêu cầu cho data model
 
 ## Tính năng cho người dùng:
-
+---
 - Tài khoản:
     - Tạo tài khoản
     - Xóa tài khoản
@@ -20,7 +20,7 @@
     - Nhấn like comment
 
 ## Mô hình của database
-
+---
 Để giải quyết bài toán trên, database của app sẽ cần 04 *collections*:
 
 ### Collection "User"
@@ -55,7 +55,7 @@ Ví dụ:
 ### Collection "Comments"
 
 ```js
-    "comments": {
+{
         [{
             "content": "Bài này viết tốt quá",
             "author": "Nguyễn Thị C",
@@ -68,15 +68,22 @@ Ví dụ:
             "authorID": ObjectId("412b1153a2aa6a3233a9132e7"),
             "like": false, // true or false
         }]
-    },
-}
+},
 ```
 
 ### Collection "Likes"
 
-## Yêu cầu chức năng cho REST API
+```js
+{
+    "author": "Nguyễn Thị C",
+    "authorID": ObjectId("745b1153a2aa6a3233a915h0"),
+    "type": "post" // "post" hoặc "comment"
+    "count": // "post": [0,50], "comment": [0,1]
+}
+```
 
-Bảng liệt kê HTTP routes và verbs:
+## Bảng liệt kê HTTP routes và verbs:
+---
 
 | Resources/Session    | Actions     | Routes     | Methods | Description | Parameters |
 |---        |---        |---        |---        |---        |---                |
