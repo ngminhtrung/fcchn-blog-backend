@@ -1,4 +1,5 @@
 import User from '../models/users.model';
+import bcrypt from 'bcrypt';
 
 /**
  * Load user and append to req.
@@ -27,15 +28,30 @@ function get(req, res) {
  * @returns {User}
  */
 function create(req, res, next) {
-  const user = new User({
-    username: req.body.username,
-    password: req.body.password,
-    email: req.body.email
-  });
-
-  user.save()
+  const { username, password, email } = req.body;
+  const saltRounds = 10;
+  bcrypt.hash(password, saltRounds)
+    .then(hash => new User({
+        username,
+        password: hash,
+        email
+      }))
+    .then(user => user.save())
     .then(savedUser => res.json(savedUser))
     .catch(e => next(e));
 }
 
-export default { load, get, create };
+/**
+ * Get user list.
+ * @property {number} req.query.skip - Number of users to be skipped.
+ * @property {number} req.query.limit - Limit number of users to be returned.
+ * @returns {User[]}
+ */
+function list(req, res, next) {
+  let { skip, limit } = req.query;
+  User.list({ skip, limit })
+    .then(data => res.json(data))
+    .catch(err => next(err))
+}
+
+export default { load, get, create, list };
