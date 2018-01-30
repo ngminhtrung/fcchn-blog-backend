@@ -2,23 +2,26 @@ import User from '../models/users.model';
 import bcrypt from 'bcrypt';
 
 /**
- * Load user and append to req.
+ * Find user data via id
  */
-function load(req, res, next, id) {
-  User.get(id)
+function findOne(req, res, next) {
+  User.get(req.params.id)
     .then((user) => {
-      req.user = user; // eslint-disable-line no-param-reassign
-      return next();
+      res.json(user);
     })
     .catch(e => next(e));
 }
 
 /**
- * Get user
- * @returns {User}
+ * Update user data via id
  */
-function get(req, res) {
-  return res.json(req.user);
+function update(req, res, next) {
+  const { id } = req.params;
+  const update = req.body;
+  User.findByIdAndUpdate(id, update, { new: true })
+   .exec()
+   .then(updatedUser => res.json(updatedUser))
+   .catch(e => next(e));
 }
 
 /**
@@ -29,7 +32,7 @@ function get(req, res) {
  */
 function create(req, res, next) {
   const { username, password, email } = req.body;
-  const saltRounds = 10;
+  const saltRounds = 10; // should be moved to config file later
   bcrypt.hash(password, saltRounds)
     .then(hash => new User({
         username,
@@ -54,4 +57,4 @@ function list(req, res, next) {
     .catch(err => next(err))
 }
 
-export default { load, get, create, list };
+export default { findOne, create, list, update };
