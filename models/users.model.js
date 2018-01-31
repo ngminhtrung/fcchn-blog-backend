@@ -1,7 +1,6 @@
 import Promise from 'bluebird';
 import mongoose from 'mongoose';
 import httpStatus from 'http-status';
-import { removePassword } from '../helpers/'
 
 /**
  * User Schema
@@ -13,30 +12,14 @@ const UserSchema = new mongoose.Schema({
   firstname: { type: String },
   lastname: { type: String },
   description: { type: String },
-  createdAt: { type: Date, default: Date.now }
-});
-
-/**
- * Post hooks for UserSchema
- */
-UserSchema.post('save', (doc, next) => {
-  removePassword(doc);
-  next();
-});
-
-UserSchema.post('findOne', (doc, next) => {
-  removePassword(doc);
-  next();
-});
-
-UserSchema.post('find', (doc, next) => {
-  removePassword(doc);
-  next();
-});
-
-UserSchema.post('findOneAndUpdate', (doc, next) => {
-  removePassword(doc);
-  next();
+}, 
+{
+  timestamps: true,
+  toObject: {
+    transform: (doc, ret) => {
+      delete ret.password;
+    }
+  }
 });
 
 /**
