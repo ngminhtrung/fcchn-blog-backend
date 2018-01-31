@@ -10,4 +10,9 @@ router.route('/')
   /** POST /api/posts - Create new post */
   .post(postController.create);
 
+  /** - Update new post with post's id */
+
+  /** - Delete new post with post's id */
+
+  /** - Read a post with post's id */
 export default router;
