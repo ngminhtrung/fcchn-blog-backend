@@ -56,18 +56,16 @@ Ví dụ:
 
 ```js
 {
-        [{
-            "content": "Bài này viết tốt quá",
-            "author": "Nguyễn Thị C",
-            "authorID": ObjectId("745b1153a2aa6a3233a915h0"),
-            "like": true, // true or false
-        }],
-               [{
-            "content": "Cần bổ sung thêm về ...",
-            "author": "Nguyễn Văn D",
-            "authorID": ObjectId("412b1153a2aa6a3233a9132e7"),
-            "like": false, // true or false
-        }]
+    {
+        "content": "Bài này viết tốt quá",
+        "authorID": ObjectId("745b1153a2aa6a3233a915h0"),
+        "postID": ObjectId("235b1153a2aa6a3233a911a4"),
+    },
+    {
+        "content": "Cần bổ sung thêm về ...",
+        "authorID": ObjectId("412b1153a2aa6a3233a9132e7"),
+        "postID": ObjectId("412b1153a2aa6a3233a913ada1"),
+    }
 },
 ```
 
@@ -75,10 +73,10 @@ Ví dụ:
 
 ```js
 {
-    "author": "Nguyễn Thị C",
-    "authorID": ObjectId("745b1153a2aa6a3233a915h0"),
-    "type": "post" // "post" hoặc "comment"
-    "count": // "post": [0,50], "comment": [0,1]
+    "ownerID": ObjectId("412b1153a2aa6a3233a9132e7"),
+    "_type": "Post", // "post" hoặc "comment"
+    "target_id": ObjectId("412b1153a2aa6a3233a9132e7"),
+    "count": 10// "post": [0,50], "comment": [0,1]
 }
 ```
 
