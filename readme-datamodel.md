@@ -16,7 +16,7 @@
 - Bài viết của người khác:
     - View bài
     - Nhấn like
-    - Comment 
+    - Comment
     - Nhấn like comment
 
 ## Mô hình của database
@@ -47,7 +47,7 @@ Ví dụ:
 {
     "_id": ObjectId("634b1153a2aa6a3233a914g9"),
     "title": "Kinh nghiệm sử dụng GIT",
-    "like": 6969 // Mỗi user có quyền like mỗi bài viết tối đa 50 lần
+    "content": "Đây là nội dung của bài viết. Blah blah ...",
     "userID": ObjectId("523b1153a2aa6a3233a913f8")
 }
 ```
@@ -114,5 +114,7 @@ Lưu ý: Xem xét thay HTTP bằng HTTP**s** để đảm bảo bảo mật thô
 
 - Xem xét sử dụng Passport hoặc Stormpath
 
+### Bài tham khảo:
 
-
+- [RESTful API Cho Người Bắt Đầu](https://www.codehub.vn/RESTful-API-Cho-Nguoi-Bat-Dau)
+- [RESTful API Designing guidelines — The best practices](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)

@@ -9,7 +9,7 @@
 
 - Những thành viên đăng ký học, code, và đóng góp cho dự án này bao gồm:
     - Front-end
-        - Nguyễn Quốc Đại
+        - Nguyễn Quốc Đại (nguyendai1992@gmail.com)
         - Nguyễn Trung Tuyến
         - Trịnh Minh Tâm
         - Lê Đức Thắng
