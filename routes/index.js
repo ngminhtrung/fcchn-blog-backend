@@ -28,6 +28,5 @@ router.put('/comments/:id', commentsController.update)
 /** PUT /api/comments:id - Delete a comment */
 router.delete('/comments/:id', commentsController.del);
 
-
 // export default router;
 module.exports = router;
