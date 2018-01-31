@@ -12,20 +12,14 @@ const UserSchema = new mongoose.Schema({
   firstname: { type: String },
   lastname: { type: String },
   description: { type: String },
-  createdAt: { type: Date, default: Date.now }
-});
-
-/**
- * Add your
- * - pre-save hooks
- * - validations
- * - virtuals
- */
-
-/**
- * Methods
- */
-UserSchema.method({
+}, 
+{
+  timestamps: true,
+  toObject: {
+    transform: (doc, ret) => {
+      delete ret.password;
+    }
+  }
 });
 
 /**
