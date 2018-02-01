@@ -26,7 +26,6 @@
     - [Câu hỏi](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-faq.md)
     
 
-
 #### Cập nhật:
 
 - 2018.01.15: Bổ sung mục *Những điều học được sau dự án*
