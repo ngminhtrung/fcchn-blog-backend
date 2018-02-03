@@ -29,4 +29,8 @@ function create(req, res, next) {
     .catch(e => next(e))
 }
 
+function read(req, res, next) {
+  
+}
+
 export default { index, create };

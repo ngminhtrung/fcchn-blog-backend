@@ -11,7 +11,7 @@ router.route('/')
   .post(postController.create);
 
   /** - Update new post with post's id */
-
+  
   /** - Delete new post with post's id */
 
   /** - Read a post with post's id */
