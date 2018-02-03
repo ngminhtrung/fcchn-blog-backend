@@ -29,8 +29,39 @@ function create(req, res, next) {
     .catch(e => next(e))
 }
 
-function read(req, res, next) {
-  
+/**
+ * Get a post by id
+ */
+function getPost(req, res, next) {
+  Post.get(req.params.id)
+    .then((post) => {
+      req.json(post);
+    })
+    .catch(e => next(e));
+}
+
+/**
+ * Update a post by id
+ */
+function update(req, res, next) {
+  const {id} = req.params;
+  const update = req.body;
+  Post.findByIdAndUpdate(id, update, { new: true })
+    .exec()
+    .then(updatePost => res.json(updatePost))
+    .catch(e => next(e));
+}
+
+/**
+ * Remove a post by id
+ */
+function remove(req, res, next) {
+  const {id} = req.params;
+  const remove = req.body;
+  Post.deleteOne(id, remove, { new: true })
+    .exec()
+    .then(deletePost => res.json(deletePost))
+    .catch(e => next(e));
 }
 
 export default { index, create };
