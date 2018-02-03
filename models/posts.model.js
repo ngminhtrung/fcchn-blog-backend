@@ -38,9 +38,9 @@ PostSchema.statics = {
   get(id) {
     return this.findById(id)
       .exec()
-      .then((user) => {
-        if (user) {
-          return user;
+      .then((post) => {
+        if (post) {
+          return post;
         }
         const err = new APIErro("No post exists!", httpStatus.NOT_FOUND);
         return Promise.reject(err);
