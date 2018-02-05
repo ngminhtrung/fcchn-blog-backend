@@ -17,6 +17,7 @@
     "express-validation": "^1.0.2",
     "http-status": "^1.0.1",
     "lodash": "^4.17.4",
+    "log4js": "^2.5.2",
     "mongoose": "^5.0.1",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
