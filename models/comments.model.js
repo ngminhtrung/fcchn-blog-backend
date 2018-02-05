@@ -1,17 +1,21 @@
-import Promise from 'bluebird';
-import mongoose from 'mongoose';
-import httpStatus from 'http-status';
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 /**
  * Comment Schema
  */
-const CommentSchema = new mongoose.Schema({
-
+var CommentSchema = new Schema({
   content: {type: String, required: true},
-  authorID: {type: Number, required: true},
-  postID: {type: Number, required: true},
-  createdAt: { type: Date, default: Date.now }
+  authorID: {type: Schema.Types.ObjectId, ref: 'User', required: true},
+  postID: {type: Schema.Types.ObjectId, ref: 'Post', required: true}
 });
+
+// Virtual for comment's url
+CommentSchema
+  .virtual('url')
+  .get(function() {
+    return '/' + this._id;
+  })
 
 /**
  * Add your

@@ -16,17 +16,8 @@ router.use('/users', userRoutes);
 // mount post routes at /posts
 router.use('/posts', postRoutes);
 
-/** GET /api/comments	 - Get list of comments */
-router.get('/comments/', commentsController.index)
-
-/** POST /api/comments - Create new comment */
-router.post('/comments/', commentsController.create)
-
-/** PUT /api/comments:id - Update a comment */
-router.put('/comments/:id', commentsController.update)
-
-/** PUT /api/comments:id - Delete a comment */
-router.delete('/comments/:id', commentsController.del);
+// mount post comments at /comments
+router.use('/comments', commentRoutes);
 
 // export default router;
 module.exports = router;
