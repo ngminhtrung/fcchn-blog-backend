@@ -11,4 +11,9 @@ router.route('/')
   // .post(validate(paramValidation.createUser), userCtrl.create);
   .post(userCtrl.create);
 
+router.route('/:id')
+  /** GET /api/users/:id - Get single user record */
+  .get(userCtrl.findOne)
+  .patch(userCtrl.update)
+
 export default router;
