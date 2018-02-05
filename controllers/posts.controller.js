@@ -46,11 +46,6 @@ function getPost(req, res, next) {
 function update(req, res, next) {
   const {id} = req.params;
   const update = req.body;
-  // new Post({
-  //   title: req.body.title,
-  //   content: req.body.content,
-  //   user: req.body.user_id
-  // });
   Post.findByIdAndUpdate(id, update, { new: true })
     .exec()
     .then(updatePost => res.json(updatePost))
