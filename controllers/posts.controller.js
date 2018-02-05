@@ -59,7 +59,7 @@ function update(req, res, next) {
 function remove(req, res, next) {
   const {id} = req.params;
   const remove = req.body;
-  Post.findByIdAndRemove(id, remove, { new: true })
+  Post.findByIdAndRemove(id, remove)
     .exec()
     .then(deletePost => res.json(deletePost))
     .catch(e => next(e));
