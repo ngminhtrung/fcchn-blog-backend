@@ -42,7 +42,7 @@ PostSchema.statics = {
         if (post) {
           return post;
         }
-        const err = new APIErro("No post exists!", httpStatus.NOT_FOUND);
+        const err = new APIError("No post exists!", httpStatus.NOT_FOUND);
         return Promise.reject(err);
       });
   },
