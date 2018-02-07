@@ -28,31 +28,20 @@ function create(req, res, next) {
     .catch(e => next(e))
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4f32473... add routers.
 /**
  * Get a post by id
  */
 function getPost(req, res, next) {
   Post.get(req.params.id)
     .then((post) => {
-<<<<<<< HEAD
       res.json(post);
-=======
-      req.json(post);
->>>>>>> 4f32473... add routers.
     })
     .catch(e => next(e));
 }
 
 /**
  * Update a post by id
-<<<<<<< HEAD
  * 
-=======
->>>>>>> 4f32473... add routers.
  */
 function update(req, res, next) {
   const {id} = req.params;
@@ -65,18 +54,11 @@ function update(req, res, next) {
 
 /**
  * Remove a post by id
-<<<<<<< HEAD
  * 
-=======
->>>>>>> 4f32473... add routers.
  */
 function remove(req, res, next) {
   const {id} = req.params;
   const remove = req.body;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2ea9d5d... Fix remove controller.
   Post.findByIdAndRemove(id, remove)
     .exec()
     .then(deletePost => res.json(deletePost))
@@ -84,16 +66,3 @@ function remove(req, res, next) {
 }
 
 export default { index, create, getPost, update, remove };
-=======
-function read(req, res, next) {
-  
-=======
-  Post.deleteOne(id, remove, { new: true })
-    .exec()
-    .then(deletePost => res.json(deletePost))
-    .catch(e => next(e));
->>>>>>> 4f32473... add routers.
-}
-
-export default { index, create };
->>>>>>> 8f574df... add update function in post's controller.
