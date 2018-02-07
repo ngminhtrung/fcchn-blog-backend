@@ -4,11 +4,9 @@ import bcrypt from 'bcrypt';
 /**
  * Find user data via id
  */
-function findOne(req, res, next) {
-  User.get(req.params.id)
-    .then((user) => {
-      res.json(user);
-    })
+function read(req, res, next) {
+  User.read(req.params.id)
+    .then(user => res.json(user))
     .catch(e => next(e));
 }
 
@@ -18,10 +16,10 @@ function findOne(req, res, next) {
 function update(req, res, next) {
   const { id } = req.params;
   const update = req.body;
-  User.findByIdAndUpdate(id, update, { new: true })
-   .exec()
-   .then(updatedUser => res.json(updatedUser))
-   .catch(e => next(e));
+
+  User.update(id, update)
+    .then(updatedUser => res.json(updatedUser))
+    .catch(e => next(e));
 }
 
 /**
@@ -33,14 +31,11 @@ function update(req, res, next) {
 function create(req, res, next) {
   const { username, password, email } = req.body;
   const saltRounds = 10; // should be moved to config file later
+
   bcrypt.hash(password, saltRounds)
-    .then(hash => new User({
-        username,
-        password: hash,
-        email
-      }))
-    .then(user => user.save())
-    .then(savedUser => res.json(savedUser))
+    .then(hash => ({ username, password: hash, email }))
+    .then(userObj => User.create(userObj))
+    .then(createdUser => res.json(createdUser))
     .catch(e => next(e));
 }
 
@@ -57,4 +52,4 @@ function list(req, res, next) {
     .catch(err => next(err))
 }
 
-export default { findOne, create, list, update };
+export default { read, create, list, update };

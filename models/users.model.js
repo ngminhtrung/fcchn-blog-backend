@@ -1,4 +1,3 @@
-import Promise from 'bluebird';
 import mongoose from 'mongoose';
 import httpStatus from 'http-status';
 
@@ -31,7 +30,7 @@ UserSchema.statics = {
    * @param {ObjectId} id - The objectId of user.
    * @returns {Promise<User, APIError>}
    */
-  get(id) {
+  read(id) {
     return this.findById(id)
       .exec()
       .then((user) => {
@@ -41,6 +40,17 @@ UserSchema.statics = {
         const err = new APIError('No such user exists!', httpStatus.NOT_FOUND);
         return Promise.reject(err);
       });
+  },
+
+  create(user) {
+    return new this(user).save()
+      .then(createdUser => createdUser);
+  },
+
+  update(id, update) {
+    return this.findByIdAndUpdate(id, update, { new: true })
+      .exec()
+      .then(updatedUser => updatedUser)
   },
 
   /**

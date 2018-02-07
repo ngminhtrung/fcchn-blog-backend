@@ -13,7 +13,7 @@ router.route('/')
 
 router.route('/:id')
   /** GET /api/users/:id - Get single user record */
-  .get(userCtrl.findOne)
+  .get(userCtrl.read)
   .patch(userCtrl.update)
 
 export default router;
