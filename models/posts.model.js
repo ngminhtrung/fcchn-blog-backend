@@ -38,19 +38,11 @@ PostSchema.statics = {
   get(id) {
     return this.findById(id)
       .exec()
-<<<<<<< HEAD
       .then((post) => {
         if (post) {
           return post;
         }
         const err = new APIError("No post exists!", httpStatus.NOT_FOUND);
-=======
-      .then((user) => {
-        if (user) {
-          return user;
-        }
-        const err = new APIErro("No post exists!", httpStatus.NOT_FOUND);
->>>>>>> 8f574df... add update function in post's controller.
         return Promise.reject(err);
       });
   },
