@@ -9,8 +9,6 @@ router.route('/')
   /** POST /api/posts - Create new post */
   .post(postController.create);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 router.route('/:id')  
   /** - Update new post with post's id */
   .put(postController.update)
@@ -20,16 +18,3 @@ router.route('/:id')
   .get(postController.getPost);
 
 export default router;
-=======
-=======
-router.route('/:id')  
->>>>>>> 4f32473... add routers.
-  /** - Update new post with post's id */
-  .get(postController.update)
-  /** - Delete new post with post's id */
-  .delete(postController.remove)
-  /** - Read a post with post's id */
-  .get(postController.getPost);
-
-export default router;
->>>>>>> 9b9bc69... add comment for update, delete, read function.
