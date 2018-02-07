@@ -33,7 +33,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   logger.error(err.stack)
   res.status(err.status || 500);
-  res.send(err);
+  res.send(err); 
 });
 
 // plugin bluebird promise in mongoose
