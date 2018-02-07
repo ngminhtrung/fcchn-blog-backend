@@ -33,13 +33,6 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   logger.error(err.stack)
   res.status(err.status || 500);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  console.log(err);
->>>>>>> 3b8ca0a... add console.log
-=======
->>>>>>> 69dc663... remove console.log().
   res.send(err); 
 });
 
