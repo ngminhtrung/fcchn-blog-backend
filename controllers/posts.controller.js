@@ -74,6 +74,9 @@ function remove(req, res, next) {
   const {id} = req.params;
   const remove = req.body;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2ea9d5d... Fix remove controller.
   Post.findByIdAndRemove(id, remove)
     .exec()
     .then(deletePost => res.json(deletePost))
