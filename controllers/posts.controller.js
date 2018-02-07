@@ -28,6 +28,7 @@ function create(req, res, next) {
     .catch(e => next(e))
 }
 
+<<<<<<< HEAD
 /**
  * Get a post by id
  */
@@ -66,3 +67,10 @@ function remove(req, res, next) {
 }
 
 export default { index, create, getPost, update, remove };
+=======
+function read(req, res, next) {
+  
+}
+
+export default { index, create };
+>>>>>>> 8f574df... add update function in post's controller.
