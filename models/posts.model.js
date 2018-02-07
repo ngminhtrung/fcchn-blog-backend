@@ -30,6 +30,23 @@ PostSchema.method({
  * Statics
  */
 PostSchema.statics = {
+   /**
+   * Get Post
+   * @param {ObjectId} id - The objectId of post.
+   * @returns {Promise<Post, APIError>}
+   */
+  get(id) {
+    return this.findById(id)
+      .exec()
+      .then((post) => {
+        if (post) {
+          return post;
+        }
+        const err = new APIError("No post exists!", httpStatus.NOT_FOUND);
+        return Promise.reject(err);
+      });
+  },
+
   /**
    * List posts in descending order of 'createdAt' timestamp.
    * @param {number} skip - Number of posts to be skipped.

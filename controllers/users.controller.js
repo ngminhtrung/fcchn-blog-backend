@@ -33,7 +33,6 @@ function create(req, res, next) {
   const saltRounds = 10; // should be moved to config file later
 
   bcrypt.hash(password, saltRounds)
-    .then(hash => hash)
     .then(hash => ({ username, password: hash, email }))
     .then(userObj => User.create(userObj))
     .then(createdUser => res.json(createdUser))
