@@ -1,5 +1,5 @@
 //During the test the env variable is set to test
-process.env.NODE_ENV = 'test';
+// process.env.NODE_ENV = 'test';
 
 //Require the dev-dependencies
 let chai = require('chai');
@@ -9,7 +9,7 @@ let should = chai.should();
 
 chai.use(chaiHttp);
 //Our parent block
-describe('Comments', () => {
+describe('Health-check', () => {
     beforeEach((done) => {
         //Before each test we empty the database in your case
         done();
@@ -17,14 +17,12 @@ describe('Comments', () => {
     /*
      * Test the /GET route
      */
-    describe('/api/comments GET', () => {
-        it('it should GET all the comments', (done) => {
-            chai.request(app)
-                .get('/api/comments')
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('array');
-                    res.body.length.should.be.eql(9); // fixme :)
+    describe('/api/health-check GET', () => {
+        it('it should get "OK"', function() {
+            return chai.request('app')
+                .get('/health-check')
+                .end(function(err, res) {
+                    expect(res).to.have.status(200);
                     done();
                 });
         });
