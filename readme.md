@@ -24,6 +24,7 @@
     - [Đóng góp cho dự án](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md)
     - [Chạy ứng dụng](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md)
     - [Câu hỏi](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-faq.md)
+    - [Tools sử dụng để test](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-tools.md)
     
 
 #### Cập nhật:
@@ -85,13 +86,13 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
 ---
 
 - [ ] Cách đóng góp vào dự án mã nguồn mở trên Github
-    - [ ] Hiểu về Git cơ bản: `clone`, `add`, `commit`, `push`
-    - [ ] Hiểu về remote và local repositories 
-    - [ ] Biết tạo nhánh (branch) và hiểu về mục đích của việc tạo nhánh
-    - [ ] Biết cách `fork`, và `pull` để cập nhật từ repo gốc
-    - [ ] Biết cách `commit` và `push` lên remote repo của bản thân
-    - [ ] Biết cách tạo `pull request` để merge từ remote repo của bản thân vào repo gốc
-    - [ ] Biết cách cập nhật pull request khi muốn thay đổi hoặc sửa lỗi trước khi merge
+    - [x] Hiểu về Git cơ bản: `clone`, `add`, `commit`, `push`
+    - [x] Hiểu về remote và local repositories 
+    - [x] Biết tạo nhánh (branch) và hiểu về mục đích của việc tạo nhánh
+    - [x] Biết cách `fork`, và `pull` để cập nhật từ repo gốc
+    - [x] Biết cách `commit` và `push` lên remote repo của bản thân
+    - [x] Biết cách tạo `pull request` để merge từ remote repo của bản thân vào repo gốc
+    - [x] Biết cách cập nhật pull request khi muốn thay đổi hoặc sửa lỗi trước khi merge
 
 - [ ] Làm việc nhóm qua mạng
     - [ ] Chọn chủ đề
@@ -115,20 +116,21 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
     - [ ] React-Router
 
 - [ ] Hiểu và thực hành các công nghệ back-end:
-    - [ ] Database:
-        - [ ] MongoDB
-        - [ ] Mongoose
-    - [ ] Rest API
+    - [x] Database:
+        - [x] MongoDB
+        - [x] Mongoose
+    - [x] Rest API
     - [ ] HTTP (hoặc HTTPs)
     - [ ] User Authentication
     - [ ] User Authorization
 
 - [ ] Hiểu và thực thành Node.js:
-    - [ ] Node.js
-    - [ ] Express.js
+    - [x] Node.js
+    - [x] Express.js
 
 - [ ] Hiểu và thực hành *unit test* cũng như *automation test*:
-    - [ ] Unit test sử dụng Karma, Mocha, Chai và Sinon
+    - [ ] Naive test sử dụng Postman và Robo3T
+    - [ ] Unit test sử dụng Mocha, Chai và Chai-Http
     - [ ] Automation test sử dụng Selenium
 
 - [ ] Biết, thống nhất, và cấu hình cho linting tool
@@ -136,8 +138,8 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
     - [ ] Code format khi commit lên remote
 
 - [ ] Hiểu cơ bản về bảo mật cho website
-    - [ ] 
-    - [ ] 
+    - [ ] Bảo mật chung cho website
+    - [ ] Bảo mật riêng cho Node.js
 
 - [ ] Biết cách cấu hình cho Webpack
 
