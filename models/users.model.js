@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import httpStatus from 'http-status';
 import { isEmail, isLength } from 'validator';
 import bcrypt from 'bcrypt';
+import errors from '@feathersjs/errors';
 
 /**
  * User Schema
@@ -61,9 +62,9 @@ UserSchema.statics = {
         if (user) {
           return user;
         }
-        const err = new APIError('No such user exists!', httpStatus.NOT_FOUND);
+        const err = new errors.NotFound();
         return Promise.reject(err);
-      });
+      })
   },
 
   create(user) {
