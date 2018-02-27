@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#CommentSchema">CommentSchema</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#getPost">getPost</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#list">list</a></li><li><a href="global.html#PostSchema">PostSchema</a></li><li><a href="global.html#read">read</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#update">update</a></li><li><a href="global.html#UserSchema">UserSchema</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>Free Code Camp Hanoi Blog Project (Back-end)</h1><h2>Giới thiệu chung</h2><hr>
+<ul>
+<li><p><strong>fcchn-blog</strong> là dự án làm 1 platform giúp mọi người chia sẻ bài viết, với mục đích để học <em>front-end</em> (React) và <em>back-end</em> (Nodejs, Express và MongoDB) của 1 nhóm các thành viên Facebook group <a href="https://www.facebook.com/groups/free.code.camp.hanoi/">freeCodeCamp Hà Nội</a>.</p>
+<ul>
+<li>Phần front-end được lưu tại <a href="https://github.com/tamtm/fcchn-blog">đây</a>.</li>
+<li>Phần back-end được lưu tại <a href="https://github.com/ngminhtrung/fcchn-blog-backend">đây</a></li>
+</ul>
+</li>
+<li><p>Những thành viên đăng ký học, code, và đóng góp cho dự án này bao gồm:</p>
+<ul>
+<li>Front-end<ul>
+<li>Nguyễn Quốc Đại</li>
+<li>Nguyễn Trung Tuyến</li>
+<li>Trịnh Minh Tâm</li>
+<li>Lê Đức Thắng</li>
+</ul>
+</li>
+<li>Back-end: <ul>
+<li>Nguyễn Minh Trung</li>
+<li>Nguyễn Thế Phụng Long</li>
+<li>Nguyễn Thế Tùng</li>
+<li>Lương Ngọc Phúc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Tài liệu quan trọng khác trong dự án:</p>
+<ul>
+<li><a href="https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-datamodel.md">Mô tả về data model</a></li>
+<li><a href="https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md">Đóng góp cho dự án</a></li>
+<li><a href="https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md">Chạy ứng dụng</a></li>
+<li><a href="https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-faq.md">Câu hỏi</a></li>
+<li><a href="https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-tools.md">Tools sử dụng để test</a></li>
+</ul>
+</li>
+</ul>
+<h4>Cập nhật:</h4><ul>
+<li>2018.01.15: Bổ sung mục <em>Những điều học được sau dự án</em></li>
+<li>2018.01.10: Thêm thành viên dự án. Quyết định cấu trúc dự án (Back-end và Front-end)</li>
+<li>2018.01.03: Tạo dự án </li>
+</ul>
+<h2>Tính năng và công nghệ</h2><hr>
+<p>Là một platform để viết blog, nơi các thành viên có thể viết blog, đăng bài, xem bài của mình cũng như của người khác, bình luận vào bài của người khác. Sản phẩm này sẽ học theo các platform viết blog khác như Medium nhưng chỉ dừng ở mức cơ bản. Mục đích cuối cùng vẫn là nắm bắt được những công nghệ cần dùng cho 1 sản phẩm hoàn thiện (xem thêm mục &quot;<em>Những điều học được qua dự án này</em>&quot; ở bên dưới)</p>
+<h3>Tính năng chi tiết</h3><ol>
+<li>Đăng ký</li>
+<li>Đăng nhập</li>
+<li>View profile</li>
+<li>Chỉnh sửa profile</li>
+<li>Viết blog mới</li>
+<li>Chỉnh sửa blog cũ</li>
+<li>View danh sách blog của bản thân</li>
+<li>View blog của người khác</li>
+<li>Xóa blog</li>
+<li>Comment</li>
+<li>Like</li>
+<li>Share Facebook</li>
+</ol>
+<h3>Công nghệ sử dụng</h3><ul>
+<li>Front-end: <ul>
+<li>React</li>
+<li>Bootstrap</li>
+</ul>
+</li>
+<li>Back-end:<ul>
+<li>Node.js</li>
+<li>Express.js</li>
+<li>MongoDB-moongoose</li>
+</ul>
+</li>
+<li>Testing:<ul>
+<li>Unit test: Karma, Mochai, Chai, Sinon</li>
+<li>Automation test: Selenium</li>
+</ul>
+</li>
+<li>Bảo mật</li>
+</ul>
+<h3>Công cụ sử dụng</h3><ol>
+<li>Visual Design: Gravit Designer</li>
+<li>Visual Studio Code</li>
+</ol>
+<h3>Cấu trúc</h3><ul>
+<li>client</li>
+<li>server</li>
+<li>test</li>
+<li>configuration</li>
+</ul>
+<h2>Tài liệu tham khảo:</h2><hr>
+<h2>Những điều học được qua dự án này</h2><hr>
+<ul>
+<li><p>[ ] Cách đóng góp vào dự án mã nguồn mở trên Github</p>
+<ul>
+<li>[x] Hiểu về Git cơ bản: <code>clone</code>, <code>add</code>, <code>commit</code>, <code>push</code></li>
+<li>[x] Hiểu về remote và local repositories </li>
+<li>[x] Biết tạo nhánh (branch) và hiểu về mục đích của việc tạo nhánh</li>
+<li>[x] Biết cách <code>fork</code>, và <code>pull</code> để cập nhật từ repo gốc</li>
+<li>[x] Biết cách <code>commit</code> và <code>push</code> lên remote repo của bản thân</li>
+<li>[x] Biết cách tạo <code>pull request</code> để merge từ remote repo của bản thân vào repo gốc</li>
+<li>[x] Biết cách cập nhật pull request khi muốn thay đổi hoặc sửa lỗi trước khi merge</li>
+</ul>
+</li>
+<li><p>[ ] Làm việc nhóm qua mạng</p>
+<ul>
+<li>[ ] Chọn chủ đề</li>
+<li>[ ] Thống nhất về workflow</li>
+<li>[ ] Ưu nhược điểm của làm việc nhóm</li>
+<li>[ ] Giao tiếp online: ưu nhược điểm. </li>
+<li>[ ] Các công cụ để giao tiếp online</li>
+<li>[ ] Giao tiếp offline: ưu nhược điểm. Cách thức.</li>
+<li>[ ] Cách giải quyết khi có mâu thuẫn</li>
+<li>[ ] Công cụ để quản lý dự án theo nhóm</li>
+<li>[ ] Cách phân chia công việc:<ul>
+<li>[ ] Cấu trúc của dự án</li>
+<li>[ ] Nhiệm vụ chi tiết  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>[ ] Hiểu và thực hành các công nghệ front-end:</p>
+<ul>
+<li>[ ] Quy trình design:<ul>
+<li>[ ] Viết requirement và user stories</li>
+<li>[ ] Sử dụng <em>Gravit Designer</em> để vẽ </li>
+</ul>
+</li>
+<li>[ ] Bootstrap</li>
+<li>[ ] React</li>
+<li>[ ] React-Router</li>
+</ul>
+</li>
+<li><p>[ ] Hiểu và thực hành các công nghệ back-end:</p>
+<ul>
+<li>[x] Database:<ul>
+<li>[x] MongoDB</li>
+<li>[x] Mongoose</li>
+</ul>
+</li>
+<li>[x] Rest API</li>
+<li>[ ] HTTP (hoặc HTTPs)</li>
+<li>[ ] User Authentication</li>
+<li>[ ] User Authorization</li>
+</ul>
+</li>
+<li><p>[ ] Hiểu và thực thành Node.js:</p>
+<ul>
+<li>[x] Node.js</li>
+<li>[x] Express.js</li>
+</ul>
+</li>
+<li><p>[ ] Hiểu và thực hành <em>unit test</em> cũng như <em>automation test</em>:</p>
+<ul>
+<li>[ ] Naive test sử dụng Postman và Robo3T</li>
+<li>[ ] Unit test sử dụng Mocha, Chai và Chai-Http</li>
+<li>[ ] Automation test sử dụng Selenium</li>
+</ul>
+</li>
+<li><p>[ ] Biết, thống nhất, và cấu hình cho linting tool</p>
+<ul>
+<li>[ ] Code format khi chạy trên local</li>
+<li>[ ] Code format khi commit lên remote</li>
+</ul>
+</li>
+<li><p>[ ] Hiểu cơ bản về bảo mật cho website</p>
+<ul>
+<li>[ ] Bảo mật chung cho website</li>
+<li>[ ] Bảo mật riêng cho Node.js</li>
+</ul>
+</li>
+<li><p>[ ] Biết cách cấu hình cho Webpack</p>
+</li>
+<li><p>[ ] Triển khai sản phẩm: quản lý asset và Heroku</p>
+</li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
