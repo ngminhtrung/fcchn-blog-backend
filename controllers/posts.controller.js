@@ -3,7 +3,7 @@ import httpStatus from 'http-status';
 
 /**
  * Get all posts
- * @return {[Post]}
+ * @return {json} Data of posts
  */
 function index(req, res, next) {
   Post.list()
