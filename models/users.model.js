@@ -32,7 +32,7 @@ const UserSchema = new mongoose.Schema({
   timestamps: true,
   toObject: {
     transform: (doc, ret) => {
-      // delete ret.password;
+      delete ret.password;
     }
   }
 });
@@ -45,6 +45,19 @@ UserSchema.pre('save', function(next) {
       next();
     });
 });
+
+/**
+ * Instance methods
+ */
+UserSchema.methods = {
+  compareBcryptPassword(plainPassword) {
+    return bcrypt.compare(plainPassword, this.password)
+      .then(result => {
+        if (result) return Promise.resolve();
+        else return Promise.reject(errors.NotAuthenticated);
+      })
+  }
+}
 
 /**
  * Statics

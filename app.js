@@ -8,17 +8,38 @@ var mongoose = require('mongoose');
 var routes = require('./routes');
 var logger = require('./config/logger');
 var errors = require('@feathersjs/errors');
+import jwt from 'jsonwebtoken';
+import passport from 'passport';
+import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
+import User from './models/users.model';
 
 var app = express();
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/api', routes);
+// setting up passport
+var jwtOptions = {}
+jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = 'MyS3cr3t';
+
+var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
+  logger.debug('payload received', jwt_payload);
+  User.read(jwt_payload.userId)
+    .then(user => {
+      if (user) {
+        return next(null, user);
+      } else {
+        return next(null, false);
+      }
+    });
+});
+
+passport.use(strategy);
+
+app.use('/api', passport.authenticate('jwt', { session: false }), routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

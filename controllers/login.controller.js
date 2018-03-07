@@ -2,7 +2,7 @@ import User from '../models/users.model';
 import bcrypt from 'bcrypt';
 import errors from '@feathersjs/errors';
 import logger from '../config/logger';
-import { compareBcrypt, generateJWT } from '../utils';
+import { generateJWT } from '../utils';
 
 /**
  * Login user
@@ -14,7 +14,7 @@ function login(req, res, next) {
   User.findByUsername(username)
     .then(user => {
       userId = user._id;
-      return compareBcrypt(plainPassword, user.password)
+      return user.compareBcryptPassword(plainPassword, user.password)
     })
     .then(() => generateJWT(userId))
     .then(token => {
