@@ -1,8 +1,9 @@
 import Post from '../models/posts.model';
+import httpStatus from 'http-status';
 
 /**
  * Get all posts
- * @return {[Post]}
+ * @return {json} Data of posts
  */
 function index(req, res, next) {
   Post.list()
@@ -15,54 +16,87 @@ function index(req, res, next) {
  * @property {string} req.body.title - title of post
  * @property {string} req.body.content - content of post
  * @property {string} req.body.user_id - author's id of post
- * @return {Post} 
+ * @return {Post}
  */
 function create(req, res, next) {
+  const { title, content, user_id } = req.body
+
   const post = new Post({
-      title: req.body.title,
-      content: req.body.content,
-      user: req.body.user_id
+      title, content,
+      user: user_id
   })
   post.save()
-    .then(post => res.status(201).json(post))
-    .catch(e => next(e))
+    .then(post => res.status(httpStatus.CREATED).json(post))
+    .catch((e) => {
+      e.status = httpStatus.UNPROCESSABLE_ENTITY
+      next(e)
+    })
 }
 
 /**
- * Get a post by id
+ * Get post by id
  */
 function getPost(req, res, next) {
-  Post.get(req.params.id)
+  const { id } = req.params
+
+  Post.findById(id)
+    .exec()
     .then((post) => {
-      res.json(post);
+      if (!post) {
+        const err = {
+          status: httpStatus.NOT_FOUND,
+          message: 'Post not found'
+        }
+        next(err)
+      }
+      res.locals.post = post
+      next()
     })
-    .catch(e => next(e));
+    .catch((e) => {
+      e.status = httpStatus.UNPROCESSABLE_ENTITY
+      next(e)
+    })
+}
+
+/**
+ * Read a post
+ */
+function read(req, res, next) {
+  const { post } = res.locals
+
+  res.json(post)
 }
 
 /**
  * Update a post by id
- * 
+ *
  */
 function update(req, res, next) {
-  const {id} = req.params;
-  const update = req.body;
-  Post.findByIdAndUpdate(id, update, { new: true })
-    .exec()
-    .then(updatePost => res.json(updatePost))
-    .catch(e => next(e));
+  const { post } = res.locals
+  const { title, content, user_id } = req.body
+
+  post.set({ title, content, user: user_id })
+  post.save()
+    .then(post => res.json(post))
+    .catch((e) => {
+      e.status = httpStatus.UNPROCESSABLE_ENTITY
+      next(e)
+    })
 }
 
 /**
  * Remove a post by id
- * 
+ *
  */
 function remove(req, res, next) {
-  const {id} = req.params;
-  const remove = req.body;
-  Post.findByIdAndRemove(id, remove)
-    .exec()
-    .then(deletePost => res.json(deletePost))
-    .catch(e => next(e));
+  const { post } = res.locals
+
+  post.remove()
+    .then(post => res.json(post))
+    .catch((e) => {
+      e.status = httpStatus.UNPROCESSABLE_ENTITY
+      next(e)
+    })
 }
 
-export default { index, create, getPost, update, remove };
+export default { index, create, getPost, read, update, remove };
