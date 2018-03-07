@@ -1,13 +1,29 @@
 import mongoose from 'mongoose';
 import httpStatus from 'http-status';
+import { isEmail, isLength } from 'validator';
+import bcrypt from 'bcrypt';
+import errors from '@feathersjs/errors';
 
 /**
  * User Schema
  */
 const UserSchema = new mongoose.Schema({
-  username: { type: String, required: true, index: { unique: true } },
-  password: { type: String, required: true },
-  email: { type: String, required: true },
+  username: { type: String, required: [true, 'username can not be empty'], index: { unique: true } },
+  password: {
+    type: String,
+    required: [true, 'password can not be empty'],
+    validate: {
+      validator: (v) => {
+        return isLength(v, { min: 6, max: undefined });
+      },
+      message: 'password is too short',
+    }
+  },
+  email: {
+    type: String,
+    required: [true, 'email can not be empty'],
+    validate: [isEmail, 'email is invalid']
+  },
   firstname: { type: String },
   lastname: { type: String },
   description: { type: String },
@@ -19,6 +35,15 @@ const UserSchema = new mongoose.Schema({
       delete ret.password;
     }
   }
+});
+
+UserSchema.pre('save', function(next) {
+  const saltRounds = 10; // should be moved to config file later
+  bcrypt.hash(this.password, saltRounds)
+    .then(hash => {
+      this.password = hash;
+      next();
+    });
 });
 
 /**
@@ -37,9 +62,9 @@ UserSchema.statics = {
         if (user) {
           return user;
         }
-        const err = new APIError('No such user exists!', httpStatus.NOT_FOUND);
+        const err = new errors.NotFound();
         return Promise.reject(err);
-      });
+      })
   },
 
   create(user) {

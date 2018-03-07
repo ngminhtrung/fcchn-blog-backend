@@ -1,5 +1,6 @@
 import User from '../models/users.model';
 import bcrypt from 'bcrypt';
+import errors from '@feathersjs/errors';
 
 /**
  * Find user data via id
@@ -30,11 +31,8 @@ function update(req, res, next) {
  */
 function create(req, res, next) {
   const { username, password, email } = req.body;
-  const saltRounds = 10; // should be moved to config file later
 
-  bcrypt.hash(password, saltRounds)
-    .then(hash => ({ username, password: hash, email }))
-    .then(userObj => User.create(userObj))
+  User.create({username, password, email })
     .then(createdUser => res.json(createdUser))
     .catch(e => next(e));
 }
@@ -49,7 +47,7 @@ function list(req, res, next) {
   let { skip, limit } = req.query;
   User.list({ skip, limit })
     .then(data => res.json(data))
-    .catch(err => next(err))
+    .catch(e => next(e));
 }
 
 export default { read, create, list, update };
