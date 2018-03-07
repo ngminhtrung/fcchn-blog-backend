@@ -32,7 +32,7 @@ const UserSchema = new mongoose.Schema({
   timestamps: true,
   toObject: {
     transform: (doc, ret) => {
-      delete ret.password;
+      // delete ret.password;
     }
   }
 });
@@ -64,6 +64,19 @@ UserSchema.statics = {
         }
         const err = new errors.NotFound();
         return Promise.reject(err);
+      })
+  },
+
+  findByUsername(username) {
+    return this.findOne({ username })
+      .exec()
+      .then(user => {
+        if (user) {
+          return user;
+        } else {
+          const err = errors.NotAuthenticated();
+          return Promise.reject(err);
+        }
       })
   },
 

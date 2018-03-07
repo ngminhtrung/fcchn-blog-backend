@@ -28,6 +28,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
+  logger.error(err);
   switch(err.name) {
     case 'CastError':
       err = new errors.BadRequest(`Invalid ${err.path} field`);
@@ -38,11 +39,13 @@ app.use(function(err, req, res, next) {
     case 'ValidationError':
       err = new errors.BadRequest(`${err.message.split(':')[2].trim()}`);
       break;
+    case 'NotAuthenticated':
+      err = new errors.NotAuthenticated();
+      break;
     default: // Internal server error
       err = new errors.GeneralError();
   }
 
-  logger.error(err);
   res.status(err.code);
   res.send(err); 
 });
