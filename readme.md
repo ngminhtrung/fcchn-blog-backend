@@ -23,7 +23,7 @@
     - [Chạy ứng dụng](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md)
     - [Câu hỏi](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-faq.md)
     - [Tools sử dụng để test](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-tools.md)
-    
+    - [API documentation](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/doc/index.html)
 
 #### Cập nhật:
 

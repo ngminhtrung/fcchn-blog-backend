@@ -9,12 +9,14 @@ router.route('/')
   /** POST /api/posts - Create new post */
   .post(postController.create);
 
-router.route('/:id')  
+router.route('/:id')
+  /** - Get post by id before doing action */
+  .all(postController.getPost)
+  /** - Read a post with post's id */
+  .get(postController.read)
   /** - Update new post with post's id */
   .put(postController.update)
   /** - Delete new post with post's id */
-  .delete(postController.remove)
-  /** - Read a post with post's id */
-  .get(postController.getPost);
+  .delete(postController.remove);
 
 export default router;

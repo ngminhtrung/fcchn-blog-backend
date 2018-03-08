@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var routes = require('./routes');
-var logger = require('./config/logger')
+var logger = require('./config/logger');
+var errors = require('@feathersjs/errors');
 
 var app = express();
 
@@ -21,22 +22,32 @@ app.use('/api', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err)
+  var error = new errors.NotFound();
+  next(error);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-  logger.error(err.stack)
-  res.status(err.status || 500);
+  switch(err.name) {
+    case 'CastError':
+      err = new errors.BadRequest(`Invalid ${err.path} field`);
+      break;
+    case 'NotFound':
+      err = new errors.NotFound();
+      break;
+    case 'ValidationError':
+      err = new errors.BadRequest(`${err.message.split(':')[2].trim()}`);
+      break;
+    default: // Internal server error
+      err = new errors.GeneralError();
+  }
+
+  logger.error(err);
+  res.status(err.code);
   res.send(err); 
 });
 
-// plugin bluebird promise in mongoose
+// use ES6 native Promise instead of depricated mongoose Promise
 mongoose.Promise = Promise;
 
 // connect to mongo db
