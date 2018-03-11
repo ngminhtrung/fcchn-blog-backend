@@ -6,7 +6,7 @@ import httpStatus from 'http-status';
  * @return {json} Data of posts
  */
 function index(req, res, next) {
-  Post.list() 
+  Post.list()
     .then(posts => res.json(posts))
     .catch(e => next(e))
 }
