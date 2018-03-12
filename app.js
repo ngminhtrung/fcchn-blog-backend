@@ -39,7 +39,7 @@ var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
 
 passport.use(strategy);
 
-app.use('/api', passport.authenticate('jwt', { session: false }), routes);
+app.use('/api', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
