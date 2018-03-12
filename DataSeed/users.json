@@ -1,0 +1,31 @@
+[{
+	"_id": {
+		"$oid": "5a71d47f50c7ca4ca878ba43"
+	},
+	"username": "ngminhtrung",
+	"password": "$2a$10$3TMq8tNjNGWZmz9/3DNypehr5lVHghk2/nFXHAXvgmnfzBVeZu5yC",
+	"email": "ngminhtrung@yahoo.com",
+	"createdAt": {
+		"$date": "2018-01-31T14:36:47.321Z"
+	},
+	"updatedAt": {
+		"$date": "2018-01-31T14:36:47.321Z"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a7823c2f89e483df52dcac9"
+	},
+	"username": "vutung",
+	"password": "$2a$10$3O0yw0/y1NjDcfnF.ytrNOO1NACCXUqm1saHxaOMV1I01kiYm5InK",
+	"email": "vutung02@yahoo.com",
+	"createdAt": {
+		"$date": "2018-02-05T09:28:34.676Z"
+	},
+	"updatedAt": {
+		"$date": "2018-02-05T09:28:34.676Z"
+	},
+	"__v": 0
+}]
+
