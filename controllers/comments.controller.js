@@ -9,6 +9,7 @@ function index(req, res, next) {
     .find()
     .where('postID').equals(req.query.post_id)
     .sort({createdAt: -1})
+    .populate('authorID','username')
     .exec(function(err, list_comments){
         if (err) { return next(err);}
         // Successful, so return the JSON
