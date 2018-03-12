@@ -4,20 +4,18 @@
 ---
 
 - **fcchn-blog** là dự án làm 1 platform giúp mọi người chia sẻ bài viết, với mục đích để học *front-end* (React) và *back-end* (Nodejs, Express và MongoDB) của 1 nhóm các thành viên Facebook group [freeCodeCamp Hà Nội](https://www.facebook.com/groups/free.code.camp.hanoi/).
-    - Phần front-end được lưu tại [đây](https://github.com/tamtm/fcchn-blog).
+    - Phần front-end được lưu tại [đây](https://github.com/freeCodeCamp-Hanoi/blog-app-front-end-01).
     - Phần back-end được lưu tại [đây](https://github.com/ngminhtrung/fcchn-blog-backend)
 
 - Những thành viên đăng ký học, code, và đóng góp cho dự án này bao gồm:
     - Front-end
-        - Nguyễn Quốc Đại
-        - Nguyễn Trung Tuyến
-        - Trịnh Minh Tâm
-        - Lê Đức Thắng
-    - Back-end: 
         - Nguyễn Minh Trung
+        - Nguyễn Khắc Việt
+    - Back-end: 
         - Nguyễn Thế Phụng Long
         - Nguyễn Thế Tùng
-        - Lương Ngọc Phúc
+        - Vũ Thanh Tùng
+        - Nguyễn Minh Trung
 
 - Tài liệu quan trọng khác trong dự án:
     - [Mô tả về data model](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-datamodel.md)
@@ -129,7 +127,7 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
     - [x] Express.js
 
 - [ ] Hiểu và thực hành *unit test* cũng như *automation test*:
-    - [ ] Naive test sử dụng Postman và Robo3T
+    - [x] Naive test sử dụng Postman và Robo3T
     - [ ] Unit test sử dụng Mocha, Chai và Chai-Http
     - [ ] Automation test sử dụng Selenium
 

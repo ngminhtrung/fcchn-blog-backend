@@ -40,6 +40,7 @@ PostSchema.statics = {
       .sort({ createdAt: -1 })
       .skip(+skip)
       .limit(+limit)
+      .populate('user', 'username')
       .exec()
       .then((posts) => ({
         limit: parseInt(limit),

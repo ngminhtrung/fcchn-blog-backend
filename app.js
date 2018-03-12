@@ -8,13 +8,17 @@ var mongoose = require('mongoose');
 var routes = require('./routes');
 var logger = require('./config/logger');
 var errors = require('@feathersjs/errors');
+var cors = require('cors');
+var app = express();
+
 import jwt from 'jsonwebtoken';
 import passport from 'passport';
 import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
 import User from './models/users.model';
 
-var app = express();
-
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

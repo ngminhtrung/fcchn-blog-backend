@@ -1,0 +1,66 @@
+[{
+	"_id": {
+		"$oid": "5a785ab2eb34811fc72444f6"
+	},
+	"content": "Bài này hay qúá đi",
+	"authorID": {
+		"$oid": "5a71d47f50c7ca4ca878ba43"
+	},
+	"postID": {
+		"$oid": "5a783dba101534696c44fd6d"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a785af9765e812068d3f911"
+	},
+	"content": "Bài này hay qúá đi",
+	"authorID": {
+		"$oid": "5a71d47f50c7ca4ca878ba43"
+	},
+	"postID": {
+		"$oid": "5a783dba101534696c44fd6d"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a785b4c0525db20fa3bed98"
+	},
+	"content": "Bài này hay qúá đi",
+	"authorID": {
+		"$oid": "5a71d47f50c7ca4ca878ba43"
+	},
+	"postID": {
+		"$oid": "5a783dba101534696c44fd6d"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a785b95dede3b21eedbfcdb"
+	},
+	"content": "Bài này hay qúá đi",
+	"authorID": {
+		"$oid": "5a71d47f50c7ca4ca878ba43"
+	},
+	"postID": {
+		"$oid": "5a783dba101534696c44fd6d"
+	},
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "5a785e18ea051f26f3cbc8db"
+	},
+	"content": "Bài này hay qúá đi",
+	"authorID": {
+		"$oid": "5a71d47f50c7ca4ca878ba43"
+	},
+	"postID": {
+		"$oid": "5a783d8e101534696c44fd6c"
+	},
+	"__v": 0
+}]
+

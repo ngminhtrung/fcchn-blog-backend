@@ -40,6 +40,7 @@ function getPost(req, res, next) {
   const { id } = req.params
 
   Post.findById(id)
+    .populate('user', 'username')
     .exec()
     .then((post) => {
       if (!post) {
