@@ -47,6 +47,19 @@ UserSchema.pre('save', function(next) {
 });
 
 /**
+ * Instance methods
+ */
+UserSchema.methods = {
+  compareBcryptPassword(plainPassword) {
+    return bcrypt.compare(plainPassword, this.password)
+      .then(result => {
+        if (result) return Promise.resolve();
+        else return Promise.reject(errors.NotAuthenticated);
+      })
+  }
+}
+
+/**
  * Statics
  */
 UserSchema.statics = {
@@ -64,6 +77,19 @@ UserSchema.statics = {
         }
         const err = new errors.NotFound();
         return Promise.reject(err);
+      })
+  },
+
+  findByUsername(username) {
+    return this.findOne({ username })
+      .exec()
+      .then(user => {
+        if (user) {
+          return user;
+        } else {
+          const err = errors.NotAuthenticated();
+          return Promise.reject(err);
+        }
       })
   },
 
