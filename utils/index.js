@@ -15,3 +15,12 @@ export const generateJWT = (userId) => {
     });
   })
 }
+
+export const verifyJwt = (token) => {
+  return new Promise((resolve, reject) => {
+    jwt.verify(token, 'MyS3cr3t', (err, payload) => {
+      if (err) return reject(err);
+      else return resolve(payload);
+    });
+  });
+}

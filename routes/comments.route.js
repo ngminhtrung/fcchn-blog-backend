@@ -6,7 +6,7 @@ const router = express.Router(); // eslint-disable-line new-cap
 
 router.route('/')
   /** GET /api/comments	 - Get list of comments */
-  .get(passport.authenticate('jwt', { session: false }), commentsController.index)
+  .get(commentsController.index)
 
   /** POST /api/comments - Create new comment */
   .post(passport.authenticate('jwt', { session: false }), commentsController.create);

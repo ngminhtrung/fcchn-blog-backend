@@ -55,6 +55,9 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   logger.error(err);
   switch(err.name) {
+    case 'JsonWebTokenError':
+      err = new errors.NotAuthenticated();
+      break;
     case 'CastError':
       err = new errors.BadRequest(`Invalid ${err.path} field`);
       break;

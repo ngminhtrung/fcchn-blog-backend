@@ -6,7 +6,7 @@ const router = express.Router(); // eslint-disable-line new-cap
 
 router.route('/')
   /** GET /api/posts - Get list posts */
-  .get(passport.authenticate('jwt', { session: false }), postController.index)
+  .get(postController.index)
   /** POST /api/posts - Create new post */
   .post(postController.create);
 
@@ -14,7 +14,7 @@ router.route('/:id')
   /** - Get post by id before doing action */
   .all(passport.authenticate('jwt', { session: false }), postController.getPost)
   /** - Read a post with post's id */
-  .get(passport.authenticate('jwt', { session: false }), postController.read)
+  .get(postController.read)
   /** - Update new post with post's id */
   .put(passport.authenticate('jwt', { session: false }), postController.update)
   /** - Delete new post with post's id */
