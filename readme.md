@@ -14,7 +14,7 @@
     - Back-end: 
         - Nguyễn Thế Phụng Long
         - Nguyễn Thế Tùng
-        - Vũ Thanh Tùng
+        - Vũ Tùng
         - Nguyễn Minh Trung
 
 - Tài liệu quan trọng khác trong dự án:
