@@ -3,20 +3,26 @@
 ## Giới thiệu chung
 ---
 
-- **fcchn-blog** là dự án làm 1 platform giúp mọi người chia sẻ bài viết, với mục đích để học *front-end* (React) và *back-end* (Nodejs, Express và MongoDB) của 1 nhóm các thành viên Facebook group [freeCodeCamp Hà Nội](https://www.facebook.com/groups/free.code.camp.hanoi/).
-    - Phần front-end được lưu tại [đây](https://github.com/freeCodeCamp-Hanoi/blog-app-front-end-01).
-    - Phần back-end được lưu tại [đây](https://github.com/ngminhtrung/fcchn-blog-backend)
+- **fcchn-blog** là dự án làm 1 platform giúp mọi người chia sẻ bài viết, với mục đích để học: *front-end* (React) và *back-end* (Nodejs, Express và MongoDB) của 1 nhóm các thành viên Facebook group [freeCodeCamp Hà Nội](https://www.facebook.com/groups/free.code.camp.hanoi/).
+    - Front-end:
+        - Github source code được lưu tại [đây](https://github.com/freeCodeCamp-Hanoi/blog-app-front-end-01). 
+        - Chưa được deploy lên Heroku.
+    - Back-end:
+        - Github source code được lưu tại [đây](https://github.com/ngminhtrung/fcchn-blog-backend)
+        - Đã được deployed lên Heroku tại [đây: https://fcchn-blog.herokuapp.com](https://fcchn-blog.herokuapp.com). Để sử dụng được api của backend, xin vui lòng xem phần [mô tả về Data Model](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-datamodel.md).
 
 - Những thành viên đăng ký học, code, và đóng góp cho dự án này bao gồm:
-    - Front-end
-        - Nguyễn Minh Trung
-        - Nguyễn Khắc Việt
     - Back-end: 
-        - Nguyễn Thế Phụng Long
-        - Nguyễn Thế Tùng
-        - Vũ Tùng
-        - Nguyễn Minh Trung
-
+        - [Nguyễn Thế Phụng Long](https://github.com/thelonglqd)
+        - [Nguyễn Thế Tùng](https://github.com/tungnt-580)
+        - [Vũ Tùng](https://github.com/vutung3196)
+        - [Khắc Thành](https://github.com/narutoo9x)
+        - [Nguyễn Minh Trung](https://github.com/ngminhtrung)
+    - Front-end
+        - [Nguyễn Khắc Việt](https://github.com/bangnokia)
+        - [Nguyễn Thế Tùng](https://github.com/tungnt-580)
+        - [Nguyễn Minh Trung](https://github.com/ngminhtrung)
+ 
 - Tài liệu quan trọng khác trong dự án:
     - [Mô tả về data model](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-datamodel.md)
     - [Đóng góp cho dự án](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md)
@@ -25,14 +31,19 @@
     - [Tools sử dụng để test](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-tools.md)
     - [API documentation](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/doc/index.html)
 
-#### Cập nhật:
+## Tiến độ & Đánh giá:
 
-- 2018.01.15: Bổ sung mục *Những điều học được sau dự án*
-- 2018.01.10: Thêm thành viên dự án. Quyết định cấu trúc dự án (Back-end và Front-end)
-- 2018.01.03: Tạo dự án 
+- Dự án bắt đầu từ tuần 1 của tháng 1 năm 2018, và kết thúc vào ngày 19 tháng 3 năm 2018. 
+- Front-end:
+    - Phần tính năng đã hoàn thành 90%, còn một vài lỗi lặt vặt. 
+    - Giao diện cần được chỉnh sửa chau chuốt hơn. 
+    - Đánh giá tổng thể hoàn thành khoảng 60%.
+- Back-end:
+    - Phần tính năng đã xong. 
+    - So với các mục tiêu đề ra (bao gồm cả test, documenation, bảo mật, v.v. ) thì đã hoàn thành được khoảng 80% - 90%. 
+- Cả front-end và back-end đã được test trên local. 
 
 ## Tính năng và công nghệ
----
 
 Là một platform để viết blog, nơi các thành viên có thể viết blog, đăng bài, xem bài của mình cũng như của người khác, bình luận vào bài của người khác. Sản phẩm này sẽ học theo các platform viết blog khác như Medium nhưng chỉ dừng ở mức cơ bản. Mục đích cuối cùng vẫn là nắm bắt được những công nghệ cần dùng cho 1 sản phẩm hoàn thiện (xem thêm mục "*Những điều học được qua dự án này*" ở bên dưới)
 
@@ -77,13 +88,10 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
 - test
 - configuration
 
-## Tài liệu tham khảo:
----
-
 ## Những điều học được qua dự án này
 ---
 
-- [ ] Cách đóng góp vào dự án mã nguồn mở trên Github
+- [x] Cách đóng góp vào dự án mã nguồn mở trên Github
     - [x] Hiểu về Git cơ bản: `clone`, `add`, `commit`, `push`
     - [x] Hiểu về remote và local repositories 
     - [x] Biết tạo nhánh (branch) và hiểu về mục đích của việc tạo nhánh
@@ -92,25 +100,25 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
     - [x] Biết cách tạo `pull request` để merge từ remote repo của bản thân vào repo gốc
     - [x] Biết cách cập nhật pull request khi muốn thay đổi hoặc sửa lỗi trước khi merge
 
-- [ ] Làm việc nhóm qua mạng
-    - [ ] Chọn chủ đề
-    - [ ] Thống nhất về workflow
-    - [ ] Ưu nhược điểm của làm việc nhóm
-    - [ ] Giao tiếp online: ưu nhược điểm. 
-    - [ ] Các công cụ để giao tiếp online
-    - [ ] Giao tiếp offline: ưu nhược điểm. Cách thức.
-    - [ ] Cách giải quyết khi có mâu thuẫn
-    - [ ] Công cụ để quản lý dự án theo nhóm
-    - [ ] Cách phân chia công việc:
-        - [ ] Cấu trúc của dự án
-        - [ ] Nhiệm vụ chi tiết  
+- [x] Làm việc nhóm qua mạng
+    - [x] Chọn chủ đề
+    - [x] Thống nhất về workflow
+    - [x] Ưu nhược điểm của làm việc nhóm
+    - [x] Giao tiếp online: ưu nhược điểm. 
+    - [x] Các công cụ để giao tiếp online
+    - [x] Giao tiếp offline: ưu nhược điểm. Cách thức.
+    - [x] Cách giải quyết khi có mâu thuẫn
+    - [x] Công cụ để quản lý dự án theo nhóm
+    - [x] Cách phân chia công việc:
+        - [x] Cấu trúc của dự án
+        - [x] Nhiệm vụ chi tiết  
 
 - [ ] Hiểu và thực hành các công nghệ front-end:
     - [ ] Quy trình design:
         - [ ] Viết requirement và user stories
         - [ ] Sử dụng *Gravit Designer* để vẽ 
-    - [ ] Bootstrap
-    - [ ] React
+    - [x] Bootstrap
+    - [x] React
     - [ ] React-Router
 
 - [ ] Hiểu và thực hành các công nghệ back-end:
@@ -119,10 +127,10 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
         - [x] Mongoose
     - [x] Rest API
     - [ ] HTTP (hoặc HTTPs)
-    - [ ] User Authentication
+    - [x] User Authentication
     - [ ] User Authorization
 
-- [ ] Hiểu và thực thành Node.js:
+- [x] Hiểu và thực thành Node.js:
     - [x] Node.js
     - [x] Express.js
 
@@ -139,6 +147,6 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
     - [ ] Bảo mật chung cho website
     - [ ] Bảo mật riêng cho Node.js
 
-- [ ] Biết cách cấu hình cho Webpack
+- [x] Biết cách cấu hình cho Webpack
 
-- [ ] Triển khai sản phẩm: quản lý asset và Heroku
+- [x] Triển khai sản phẩm: quản lý asset và Heroku
