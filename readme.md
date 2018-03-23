@@ -6,27 +6,25 @@
 - **fcchn-blog** là dự án làm 1 platform giúp mọi người chia sẻ bài viết, với mục đích để học: *front-end* (React) và *back-end* (Nodejs, Express và MongoDB) của 1 nhóm các thành viên Facebook group [freeCodeCamp Hà Nội](https://www.facebook.com/groups/free.code.camp.hanoi/).
     - Front-end:
         - Github source code được lưu tại [đây](https://github.com/freeCodeCamp-Hanoi/blog-app-front-end-01). 
-        - Chưa được deploy lên Heroku.
+        - Đã được deploy lên Heroku tại [đây](https://fcchn-blog-frontend.herokuapp.com/). Để xem bài và viết bài, bạn có thể đăng ký user và password mới, hoặc sử dụng username/password là fcchanoi/123456.
     - Back-end:
         - Github source code được lưu tại [đây](https://github.com/ngminhtrung/fcchn-blog-backend)
         - Đã được deployed lên Heroku tại [đây: https://fcchn-blog.herokuapp.com](https://fcchn-blog.herokuapp.com). Để sử dụng được api của backend, xin vui lòng xem phần [mô tả về Data Model](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-datamodel.md).
 
 - Những thành viên đăng ký học, code, và đóng góp cho dự án này bao gồm:
-    - Back-end: 
-        - [Nguyễn Thế Phụng Long](https://github.com/thelonglqd)
-        - [Nguyễn Thế Tùng](https://github.com/tungnt-580)
-        - [Vũ Tùng](https://github.com/vutung3196)
-        - [Khắc Thành](https://github.com/narutoo9x)
-        - [Nguyễn Minh Trung](https://github.com/ngminhtrung)
-    - Front-end
-        - [Nguyễn Khắc Việt](https://github.com/bangnokia)
-        - [Nguyễn Thế Tùng](https://github.com/tungnt-580)
-        - [Nguyễn Minh Trung](https://github.com/ngminhtrung)
+
+    |Back-end                                                       | Front-end|
+    |---                                                            |---                            |
+    |1. [Nguyễn Thế Phụng Long](https://github.com/thelonglqd)      |1. [Nguyễn Khắc Việt](https://github.com/bangnokia) |
+    |2. [Nguyễn Thế Tùng](https://github.com/tungnt-580)            |2. [Nguyễn Thế Tùng](https://github.com/tungnt-580) |
+    |3. [Vũ Tùng](https://github.com/vutung3196)                    |3. [Nguyễn Minh Trung](https://github.com/ngminhtrung) |
+    |4. [Khắc Thành](https://github.com/narutoo9x)                  |           |
+    |5. [Nguyễn Minh Trung](https://github.com/ngminhtrung)         |           |
  
 - Tài liệu quan trọng khác trong dự án:
     - [Mô tả về data model](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-datamodel.md)
     - [Đóng góp cho dự án](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md)
-    - [Chạy ứng dụng](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md)
+    - [Cách cài ứng dụng](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/Contributing.md)
     - [Câu hỏi](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-faq.md)
     - [Tools sử dụng để test](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/readme-tools.md)
     - [API documentation](https://github.com/ngminhtrung/fcchn-blog-backend/blob/master/doc/index.html)
@@ -42,6 +40,7 @@
     - Phần tính năng đã xong. 
     - So với các mục tiêu đề ra (bao gồm cả test, documenation, bảo mật, v.v. ) thì đã hoàn thành được khoảng 80% - 90%. 
 - Cả front-end và back-end đã được test trên local. 
+- Toàn bộ đã được deploy lên heroku. Kiểm tra tại đây: https://fcchn-blog-frontend.herokuapp.com/
 
 ## Tính năng và công nghệ
 
