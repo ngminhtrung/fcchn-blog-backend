@@ -1,7 +1,6 @@
 # Free Code Camp Hanoi Blog Project (Back-end)
 
 ## Giới thiệu chung
----
 
 - **fcchn-blog** là dự án làm 1 platform giúp mọi người chia sẻ bài viết, với mục đích để học: *front-end* (React) và *back-end* (Nodejs, Express và MongoDB) của 1 nhóm các thành viên Facebook group [freeCodeCamp Hà Nội](https://www.facebook.com/groups/free.code.camp.hanoi/).
     - Front-end:
@@ -91,7 +90,6 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
 - configuration
 
 ## Những điều học được qua dự án này
----
 
 - [x] Cách đóng góp vào dự án mã nguồn mở trên Github
     - [x] Hiểu về Git cơ bản: `clone`, `add`, `commit`, `push`
