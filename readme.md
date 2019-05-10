@@ -48,6 +48,8 @@ Là một platform để viết blog, nơi các thành viên có thể viết bl
 
 ![Technologies](./images/image001.png)
 
+![Illustration](./images/2019-05-10_16-27-49.gif)
+
 ### Tính năng chi tiết
 
 1. Đăng ký
